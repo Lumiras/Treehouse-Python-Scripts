@@ -23,16 +23,17 @@
 # for value in my_dict.values():
 #     print(value)
 
-my_alphabet_list = list('abcdefghijklmnopqrstuvwxyz')
+# my_alphabet_list = list('abcdefghijklmnopqrstuvwxyz')
 
 # count = 0
 # for letter in my_alphabet_list:
 #     print('{}: {}'.format(count, letter))
 #     count += 1
 
-for whateveriwantittobe in enumerate(my_alphabet_list):
-    print('{} : {}'.format(*whateveriwantittobe))
+# for whateveriwantittobe in enumerate(my_alphabet_list):
+#     print('{} : {}'.format(*whateveriwantittobe))
 
 dicts = {'name' : 'August', 'food' : 'Pretzels', 'hobbies' : 'Suicide', 'nationality' : 'German'}
+
 for key, value in dicts.items():
     print('{} : {}'.format(key.title(), value))

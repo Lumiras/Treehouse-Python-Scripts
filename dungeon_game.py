@@ -21,22 +21,15 @@ print(random.choice(my_coords))
 #     return results
 
 def get_locations():
-    #monster = rand loc
     monster = random.choice(CELLS)
-    #door = rand loc
     door = random.choice(CELLS)
-    #player_start = rand loc
     player = random.choice(CELLS)
     #if monster, door or start are the same, re-roll
-    if player == monster:
-        #reset?
-    elif door == player:
-        #reset?
-    elif door == monster:
-        #reset?
-    #return monster, door, start
+    if monster == door or monster == start or door == start:
+        return get_locations()
+
     return monster, door, player
-    
+
 def move_player(player, move):
     #get current loc
     #if move is left,  y - 1
@@ -52,11 +45,15 @@ def get_moves(player):
     #if player's x is 4, remove down
     return MOVES
 
+monster, door, player = get_locations()
+
 while True:
     print("Welcome to my dungeon!")
-    print("You are currently in room {}") #fill in with player loc
+    print("You are currently in room {}".format(player))
     print("You can move {}") #fill with available moves
     print("Enter QUIT to quit")
+
+    moves = get_moves(player)
 
     move = input("> ")
     move = move.upper()
