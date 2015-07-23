@@ -50,7 +50,7 @@ monster, door, player = get_locations()
 while True:
     print("Welcome to my dungeon!")
     print("You are currently in room {}".format(player))
-    print("You can move {}") #fill with available moves
+    print("You can move {}".format(moves)) #fill with available moves
     print("Enter QUIT to quit")
 
     moves = get_moves(player)
