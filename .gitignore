@@ -1,2 +1,6 @@
 
 *.pyc
+
+venv/lib/python3.4/site-packages/easy_install.py
+
+venv/.Python
